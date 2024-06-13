@@ -1,7 +1,7 @@
 import './Target.css'
 import {useState, useEffect} from 'react'
 
-export const Target = ({score, setScore, highScore, setHighScore, name, time}) => {
+export const Target = ({score, setScore, highScore, setHighScore, name, time, targetSize}) => {
     const [randomNum, setRandomNum] = useState(null);
     const [element, setElement] = useState(null);
     const [boolean, setBoolean] = useState(true);
@@ -26,6 +26,15 @@ export const Target = ({score, setScore, highScore, setHighScore, name, time}) =
                         }
                 })
         }, [newBoolean])
+
+    useEffect(() => {
+        console.log("きました")
+        for (let i = 1; i < 21; i++){
+            const ele = document.getElementById(i);
+            ele.style.width = `${targetSize}px`
+            ele.style.height = `${targetSize}px`
+            }
+        },[targetSize])
 
     const timer = () => {
         setTimeout(() => {
@@ -52,6 +61,7 @@ export const Target = ({score, setScore, highScore, setHighScore, name, time}) =
         }
 
     const reload = () => {
+        console.log(element)
         element.style.backgroundColor = "#FFFFCC"
         setScore(0);
         setRandomNum(null);
@@ -59,6 +69,8 @@ export const Target = ({score, setScore, highScore, setHighScore, name, time}) =
         setBoolean(true);
         setNewBoolean(false);
         }
+
+
 
     return (
     <div className="target">
