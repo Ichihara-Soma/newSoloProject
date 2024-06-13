@@ -1,0 +1,7 @@
+.navbar-changer {
+    display: flex;
+}
+.selection {
+    width: 40%;
+    text-align: center;
+}
