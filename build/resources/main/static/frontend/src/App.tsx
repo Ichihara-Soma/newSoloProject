@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Route, Routes, Link, Router } from "react-router-dom";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import './App.css'
 
 import {Top} from './Top'
 import {GamesList} from './GamesList'

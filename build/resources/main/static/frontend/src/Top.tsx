@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useRef } from 'react';
+import './Top.css'
 
 export const Top = ({setName}) => {
     const navigate = useNavigate();
@@ -25,13 +26,12 @@ export const Top = ({setName}) => {
     }
 
      return (
-         <div>
-         <h1>ニックネームを決めてね！</h1>
-         <input placeholder="ニックネーム" ref={nameRef} />
-         <button onClick={() => {
-             postName(nameRef.current.value)
-         }}>ゲームを選ぶ</button>
-
+         <div className="topPage">
+            <h1 className="title">ニックネームを決めてね！</h1>
+            <input className="input" placeholder="ニックネーム" ref={nameRef} />
+            <button className="button" onClick={() => {
+                postName(nameRef.current.value)
+            }}>ゲームを選ぶ</button>
          </div>
      );
      }

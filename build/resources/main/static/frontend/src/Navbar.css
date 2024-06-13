@@ -1,3 +1,6 @@
+.navbar {
+    margin: auto 20%;
+}
 .navbar-changer {
     display: flex;
 }

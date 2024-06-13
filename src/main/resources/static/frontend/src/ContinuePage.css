@@ -1,0 +1,20 @@
+.continuePage {
+    border: 2px solid #aaa;
+    margin: 5% auto;
+    padding: 10%;
+    border-radius: 10px;
+}
+.continueBtn {
+    width: 220px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    background-color: #FF8C00;
+}
+.rankingBtn {
+    width: 220px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    background-color: #00BFFF	;
+}

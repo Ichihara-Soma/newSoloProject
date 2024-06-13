@@ -9,7 +9,13 @@
 .target-zone {
      border: 2px solid #aaa;
      width: 60%;
-     text-align: center;
+     margin: auto 20%;
+}
+.startBtn {
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FF8C00;
 }
 .target-button {
     width: 50px;

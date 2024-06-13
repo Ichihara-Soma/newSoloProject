@@ -1,17 +1,21 @@
 import './Target.css'
 import {useState, useEffect} from 'react'
+import {ContinuePage} from './ContinuePage'
 
 export const Target = ({score, setScore, highScore, setHighScore, name, time, targetSize}) => {
     const [randomNum, setRandomNum] = useState(null);
     const [element, setElement] = useState(null);
     const [boolean, setBoolean] = useState(true);
     const [newBoolean, setNewBoolean] = useState(false);
+    const [conti, setConti] = useState(true);
+    const [scoreUpdate, setScoreUpdate] = useState(false);
 
     useEffect( () => {
         fetch(`/api/highScore?name=${name}`)
             .then((res) => res.json())
             .then((data) => {
                 if(score > data[0].score){
+                    setScoreUpdate(true);
                     setHighScore(score);
                     const body = {"score": score}
                     fetch(`/api/update?name=${name}`, {
@@ -28,7 +32,6 @@ export const Target = ({score, setScore, highScore, setHighScore, name, time, ta
         }, [newBoolean])
 
     useEffect(() => {
-        console.log("きました")
         for (let i = 1; i < 21; i++){
             const ele = document.getElementById(i);
             ele.style.width = `${targetSize}px`
@@ -41,6 +44,7 @@ export const Target = ({score, setScore, highScore, setHighScore, name, time, ta
             console.log("終了")
             setNewBoolean(true)
             setBoolean(false);
+            setConti(false);
             }, time)
         }
 
@@ -68,16 +72,15 @@ export const Target = ({score, setScore, highScore, setHighScore, name, time, ta
         setElement(null);
         setBoolean(true);
         setNewBoolean(false);
+        setScoreUpdate(false);
         }
 
 
 
     return (
+    conti === true ? (
     <div className="target">
-        <button onClick={() => reload()}>
-        reset
-        </button>
-        <button onClick={() => {
+        <button className="startBtn" onClick={() => {
             changeColor(0);
             timer();
             }} id="0">START</button>
@@ -104,5 +107,8 @@ export const Target = ({score, setScore, highScore, setHighScore, name, time, ta
             <button onClick={() => changeColor(20)} id="20" className="target-button">20</button>
         </div>
     </div>
+        ) : (
+    <ContinuePage setConti={setConti} reload={reload} scoreUpdate={scoreUpdate} />
+            )
     )
     }

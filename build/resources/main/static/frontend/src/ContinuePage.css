@@ -1,0 +1,13 @@
+.continuePage {
+    border: 2px solid #aaa;
+    margin: 10% auto;
+    padding: 15%;
+    border-radius: 10px;
+}
+.continueBtn {
+    width: 220px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    background-color: #FF8C00;
+}

@@ -1,7 +1,7 @@
 import './Navbar.css';
 import {useState} from 'react';
 
-export const Navbar = ({score, highScore, setTime}) => {
+export const Navbar = ({score, highScore, setTime, setTargetSize}) => {
 
 
     return (
@@ -10,9 +10,9 @@ export const Navbar = ({score, highScore, setTime}) => {
             <div className="navbar-changer">
                 <div className="selection">
                     <h4>難易度を選択</h4>
-                    <button>易しい</button>
-                    <button>普通</button>
-                    <button>難しい</button>
+                    <button onClick={() => setTargetSize(50)}>易しい</button>
+                    <button onClick={() => setTargetSize(40)}>普通</button>
+                    <button onClick={() => setTargetSize(30)}>難しい</button>
                     <h4>時間を選択</h4>
                     <button onClick={() => setTime(1000)}>30秒</button>
                     <button onClick={() => setTime(2000)}>60秒</button>
