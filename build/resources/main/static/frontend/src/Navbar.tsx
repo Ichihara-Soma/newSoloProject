@@ -14,9 +14,9 @@ export const Navbar = ({score, highScore, setTime, setTargetSize}) => {
                     <button onClick={() => setTargetSize(40)}>普通</button>
                     <button onClick={() => setTargetSize(30)}>難しい</button>
                     <h4>時間を選択</h4>
-                    <button onClick={() => setTime(1000)}>30秒</button>
-                    <button onClick={() => setTime(2000)}>60秒</button>
-                    <button onClick={() => setTime(3000)}>120秒</button>
+                    <button onClick={() => setTime(30000)}>30秒</button>
+                    <button onClick={() => setTime(60000)}>60秒</button>
+                    <button onClick={() => setTime(120000)}>120秒</button>
                 </div>
                 <div className="score">
                     <h2>最高点: {highScore}/m</h2>

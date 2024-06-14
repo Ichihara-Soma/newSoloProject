@@ -40,11 +40,11 @@ class SoloprojectApplicationTests(
 		val response = restTemplate.getForEntity("http://localhost:$port/api/games", Array<CursorGames>::class.java)
 		assertThat(response.headers.contentType, equalTo(MediaType.APPLICATION_JSON))
 		val games = response.body!!
-		assertThat(games.size, equalTo(2))
+		assertThat(games.size, equalTo(4))
 		assertThat(games[0].id, equalTo(1))
-		assertThat(games[0].name, equalTo("test"))
+		assertThat(games[0].name, equalTo("おついちさん"))
 		assertThat(games[1].id, equalTo(2))
-		assertThat(games[1].name, equalTo("hoge"))
+		assertThat(games[1].name, equalTo("ミスターX"))
 	}
 
 	@Test
@@ -80,23 +80,24 @@ class SoloprojectApplicationTests(
 
 	@Test
 	fun `queryを指定したGETリクエストはCursorGamesオブジェクトのリストを返す` () {
-		val name = "test"
+		val name = "ミスターY"
 		val response = restTemplate.getForEntity("http://localhost:$port/api/highScore?name=$name", Array<CursorGames>::class.java)
 		val gameData = response.body!!
-		assertThat(gameData[0].name, equalTo("test"))
-		assertThat(gameData[0].score, equalTo(200))
+		assertThat(gameData[0].name, equalTo("ミスターY"))
+		assertThat(gameData[0].score, equalTo(800))
 	}
 
 	@Test
 	fun `PUTリクエストでCursorGamesのオブジェクトを更新する`() {
 		// PUTリクエストでCursorGamesのオズジェクトを更新する
-		val name = "test"
-		val request = PutCursorGames(250)
+		val name = "ミスターX"
+		val request = PutCursorGames(650)
 		restTemplate.put("http://localhost:$port/api/update?name=$name", request, String::class.java)
 		// 更新後の状態を取得する
 		val getResponse = restTemplate.getForEntity("http://localhost:$port/api/highScore?name=$name", Array<CursorGames>::class.java)
 		val gameData = getResponse.body!!
-		assertThat(gameData[0].score, equalTo(250))
+		assertThat(gameData[0].score, equalTo(650))
 	}
+
 
 }

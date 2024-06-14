@@ -1,7 +1,7 @@
 .continuePage {
     border: 2px solid #aaa;
-    margin: 10% auto;
-    padding: 15%;
+    margin: 5% auto;
+    padding: 10%;
     border-radius: 10px;
 }
 .continueBtn {
@@ -9,5 +9,18 @@
     padding: 10px;
     border-radius: 10px;
     font-size: 1.8rem;
+    background-color: #FF8C00;
+}
+.rankingBtn {
+    width: 220px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    background-color: #00BFFF	;
+}
+.continueButton {
+    width: 220px;
+    border-radius: 10px;
+    font-size: 1.2rem;
     background-color: #FF8C00;
 }

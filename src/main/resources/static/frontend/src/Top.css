@@ -2,5 +2,24 @@
     margin: 30% auto;
 }
 .title {
-    padding: 10%;
+    padding: 0%;
+    font-size: 300%;
+}
+.inBt {
+    display: flex;
+    padding: 0px 0px 0px 30%;
+}
+.input {
+    width: 240px;
+    height: 30px;
+    text-align: center;
+    font-size: 200%;
+}
+.button {
+    width: 140px;
+    height: 36px;
+    margin: 0 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: #FF8C00;
 }

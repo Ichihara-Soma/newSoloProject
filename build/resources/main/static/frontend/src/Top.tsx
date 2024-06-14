@@ -10,7 +10,6 @@ export const Top = ({setName}) => {
         const res = await fetch(`/api/highScore?name=${nameRef.current.value}`)
         const data = await res.json()
         if(data.length === 0){
-            console.log("から配列")
             setName(name)
             const body = {"name": name};
             fetch("/api/games", {
@@ -28,10 +27,12 @@ export const Top = ({setName}) => {
      return (
          <div className="topPage">
             <h1 className="title">ニックネームを決めてね！</h1>
-            <input className="input" placeholder="ニックネーム" ref={nameRef} />
-            <button className="button" onClick={() => {
-                postName(nameRef.current.value)
-            }}>ゲームを選ぶ</button>
+            <div className="inBt">
+                <input className="input" placeholder="ニックネーム" ref={nameRef} />
+                <button className="button" onClick={() => {
+                    postName(nameRef.current.value)
+                }}>ゲームを選ぶ</button>
+            </div>
          </div>
      );
      }

@@ -6,7 +6,7 @@ import {Score} from './Score'
 export const GameContents = ({name}) => {
     const [score, setScore] = useState(0)
     const [highScore, setHighScore] = useState(0);
-    const [time, setTime] = useState(3000)
+    const [time, setTime] = useState(30000)
     const [targetSize, setTargetSize] = useState(50)
 
     return (

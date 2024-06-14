@@ -53,7 +53,7 @@ export const Target = ({score, setScore, highScore, setHighScore, name, time, ta
             if (idNum === randomNum || idNum === 0) {
                 if(idNum !== 0){
                     element.style.backgroundColor = "#FFFFCC"
-                    score += 10;
+                    score += 10 * (60 / (time / 1000));
                     setScore(score);
                     }
                 const num = Math.floor(Math.random() * 20 + 1)
@@ -65,7 +65,6 @@ export const Target = ({score, setScore, highScore, setHighScore, name, time, ta
         }
 
     const reload = () => {
-        console.log(element)
         element.style.backgroundColor = "#FFFFCC"
         setScore(0);
         setRandomNum(null);

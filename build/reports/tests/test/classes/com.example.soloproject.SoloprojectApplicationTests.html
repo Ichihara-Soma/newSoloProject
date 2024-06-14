@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">9</div>
+<div class="counter">1</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.614s</div>
+<div class="counter">0.516s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,48 +81,8 @@
 </tr>
 </thead>
 <tr>
-<td class="success">GETリクエストにはOKステータスを返す()</td>
-<td class="success">0.508s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">GETリクエストはCursorGamesオブジェクトのリストを返す()</td>
-<td class="success">0.010s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">POSTリクエストはCursorGameオブジェクトを格納する()</td>
-<td class="success">0.038s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">POSTリクエストはOKステータスを返す()</td>
-<td class="success">0.011s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">PUTリクエストでCursorGamesのオブジェクトを更新する()</td>
-<td class="success">0.013s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">WHERE句を指定したGETリクエストはOKステータスを返す()</td>
-<td class="success">0.008s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">contextLoads()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
 <td class="success">queryを指定したGETリクエストはCursorGamesオブジェクトのリストを返す()</td>
-<td class="success">0.018s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">最初のテスト()</td>
-<td class="success">0.005s</td>
+<td class="success">0.516s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -130,8 +90,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>13:45:27.556 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.soloproject.SoloprojectApplicationTests]: SoloprojectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-13:45:27.596 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.soloproject.SoloprojectApplication for test class com.example.soloproject.SoloprojectApplicationTests
+<pre>09:24:51.608 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.soloproject.SoloprojectApplicationTests]: SoloprojectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:24:51.656 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.soloproject.SoloprojectApplication for test class com.example.soloproject.SoloprojectApplicationTests
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -141,33 +101,28 @@
 
  :: Spring Boot ::                (v3.3.0)
 
-2024-06-13T13:45:27.725+09:00  INFO 85788 --- [soloproject] [    Test worker] c.e.s.SoloprojectApplicationTests        : Starting SoloprojectApplicationTests using Java 21.0.3 with PID 85788 (started by user in /Users/user/Desktop/BTC6/week08/Day26/newSoloProject)
-2024-06-13T13:45:27.725+09:00  INFO 85788 --- [soloproject] [    Test worker] c.e.s.SoloprojectApplicationTests        : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-06-13T13:45:27.930+09:00  INFO 85788 --- [soloproject] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-06-13T13:45:27.937+09:00  INFO 85788 --- [soloproject] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
-2024-06-13T13:45:28.110+09:00  INFO 85788 --- [soloproject] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-06-13T13:45:28.115+09:00  INFO 85788 --- [soloproject] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-06-13T13:45:28.116+09:00  INFO 85788 --- [soloproject] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-13T13:45:28.138+09:00  INFO 85788 --- [soloproject] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-06-13T13:45:28.138+09:00  INFO 85788 --- [soloproject] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 406 ms
-2024-06-13T13:45:28.232+09:00  INFO 85788 --- [soloproject] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-06-13T13:45:28.267+09:00  INFO 85788 --- [soloproject] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57a667c8
-2024-06-13T13:45:28.268+09:00  INFO 85788 --- [soloproject] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-06-13T13:45:28.279+09:00  INFO 85788 --- [soloproject] [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost/cursor_game (PostgreSQL 14.12)
-2024-06-13T13:45:28.301+09:00  INFO 85788 --- [soloproject] [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.013s)
-2024-06-13T13:45:28.318+09:00  INFO 85788 --- [soloproject] [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema &quot;public&quot;: 1
-2024-06-13T13:45:28.319+09:00  INFO 85788 --- [soloproject] [    Test worker] o.f.core.internal.command.DbMigrate      : Schema &quot;public&quot; is up to date. No migration necessary.
-2024-06-13T13:45:28.363+09:00  INFO 85788 --- [soloproject] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2024-06-13T13:45:28.519+09:00  INFO 85788 --- [soloproject] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 60759 (http) with context path '/'
-2024-06-13T13:45:28.523+09:00  INFO 85788 --- [soloproject] [    Test worker] c.e.s.SoloprojectApplicationTests        : Started SoloprojectApplicationTests in 0.884 seconds (process running for 1.291)
-2024-06-13T13:45:28.975+09:00  INFO 85788 --- [soloproject] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-13T13:45:28.975+09:00  INFO 85788 --- [soloproject] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-06-13T13:45:28.976+09:00  INFO 85788 --- [soloproject] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-in
-test
-250
-test
-250
+2024-06-14T09:24:51.808+09:00  INFO 449 --- [soloproject] [    Test worker] c.e.s.SoloprojectApplicationTests        : Starting SoloprojectApplicationTests using Java 21.0.3 with PID 449 (started by user in /Users/user/Desktop/BTC6/week08/Day26/newSoloProject)
+2024-06-14T09:24:51.808+09:00  INFO 449 --- [soloproject] [    Test worker] c.e.s.SoloprojectApplicationTests        : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-06-14T09:24:52.067+09:00  INFO 449 --- [soloproject] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-14T09:24:52.076+09:00  INFO 449 --- [soloproject] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2024-06-14T09:24:52.275+09:00  INFO 449 --- [soloproject] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-06-14T09:24:52.284+09:00  INFO 449 --- [soloproject] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-14T09:24:52.284+09:00  INFO 449 --- [soloproject] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-14T09:24:52.309+09:00  INFO 449 --- [soloproject] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-14T09:24:52.310+09:00  INFO 449 --- [soloproject] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 494 ms
+2024-06-14T09:24:52.424+09:00  INFO 449 --- [soloproject] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-14T09:24:52.460+09:00  INFO 449 --- [soloproject] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c9a3661
+2024-06-14T09:24:52.461+09:00  INFO 449 --- [soloproject] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-14T09:24:52.473+09:00  INFO 449 --- [soloproject] [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost/cursor_game (PostgreSQL 14.12)
+2024-06-14T09:24:52.492+09:00  INFO 449 --- [soloproject] [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.011s)
+2024-06-14T09:24:52.501+09:00  INFO 449 --- [soloproject] [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema &quot;public&quot;: 1
+2024-06-14T09:24:52.502+09:00  INFO 449 --- [soloproject] [    Test worker] o.f.core.internal.command.DbMigrate      : Schema &quot;public&quot; is up to date. No migration necessary.
+2024-06-14T09:24:52.569+09:00  INFO 449 --- [soloproject] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-14T09:24:52.785+09:00  INFO 449 --- [soloproject] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 62413 (http) with context path '/'
+2024-06-14T09:24:52.789+09:00  INFO 449 --- [soloproject] [    Test worker] c.e.s.SoloprojectApplicationTests        : Started SoloprojectApplicationTests in 1.077 seconds (process running for 1.519)
+2024-06-14T09:24:53.237+09:00  INFO 449 --- [soloproject] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-14T09:24:53.237+09:00  INFO 449 --- [soloproject] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-14T09:24:53.238+09:00  INFO 449 --- [soloproject] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
 </pre>
 </span>
 </div>
@@ -189,7 +144,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.8</a> at 2024/06/13 13:45:30</p>
+<a href="http://www.gradle.org">Gradle 8.8</a> at 2024/06/14 9:24:54</p>
 </div>
 </div>
 </body>

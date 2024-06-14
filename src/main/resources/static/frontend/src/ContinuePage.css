@@ -18,3 +18,9 @@
     font-size: 1.3rem;
     background-color: #00BFFF	;
 }
+.continueButton {
+    width: 220px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: #FF8C00;
+}
