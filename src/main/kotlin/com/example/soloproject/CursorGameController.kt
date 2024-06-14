@@ -47,9 +47,6 @@ class CursorGameController(@Autowired val cursorGameRepository: CursorGameReposi
 
     @PutMapping("/update")
     fun putScore(@RequestParam name: String, @RequestBody putCursorGames: PutCursorGames) {
-        println("in")
-        println(name)
-        println(putCursorGames.score)
         cursorGameRepository.updateScore(name, putCursorGames)
         return
     }

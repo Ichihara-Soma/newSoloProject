@@ -44,8 +44,6 @@ class CursorGameRepository(@Autowired val jdbcTemplate: JdbcTemplate) {
     }
 
     fun updateScore(name: String, @Autowired putCursorGames: PutCursorGames) {
-        println(name)
-        println(putCursorGames.score)
         jdbcTemplate.update("UPDATE cursorgames SET score= ? WHERE name='$name'", putCursorGames.score)
     }
 

@@ -15,7 +15,7 @@ export const App = () => {
   return (
       <BrowserRouter>
         <Routes>
-            <Route path="/top" element={<Top setName={setName} />} />
+            <Route path="/" element={<Top setName={setName} />} />
             <Route path="/game/list" element={<GamesList />} />
             <Route path="/game/contents" element={<GameContents name={name} />} />
         </Routes>
